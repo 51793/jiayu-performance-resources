@@ -578,7 +578,7 @@ summary:focus-visible {
   position: relative;
   display: grid;
   min-height: 560px;
-  overflow: clip;
+  overflow: hidden;
   place-items: center;
 }
 
@@ -2051,6 +2051,7 @@ summary:focus-visible {
   z-index: 3;
   inset: 0;
   overflow: hidden;
+  contain: strict;
   pointer-events: none;
 }
 
