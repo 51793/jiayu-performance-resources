@@ -272,6 +272,7 @@ summary:focus-visible {
   align-items: center;
   gap: 72px;
   min-height: 800px;
+  overflow: hidden;
   padding-block: 72px 94px;
 }
 
