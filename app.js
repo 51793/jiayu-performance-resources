@@ -1,3 +1,7 @@
+if (window.top !== window.self) {
+  document.documentElement.style.visibility = "hidden";
+}
+
 const PRODUCTS = [
   {
     id: "mfr45y",
@@ -319,6 +323,15 @@ function createPetals() {
   petalLayer.appendChild(fragment);
 }
 
-year.textContent = new Date().getFullYear();
-renderProducts();
-createPetals();
+if (window.top !== window.self) {
+  const blockedNotice = document.createElement("p");
+  blockedNotice.textContent = "此页面不支持被其他网站嵌入显示。";
+  blockedNotice.style.cssText =
+    "margin:20vh auto;max-width:520px;padding:24px;color:#ffeaf0;background:#201824;font:16px/1.7 'Microsoft YaHei',sans-serif;text-align:center;border-radius:16px;";
+  document.body.replaceChildren(blockedNotice);
+  document.documentElement.style.visibility = "visible";
+} else {
+  year.textContent = new Date().getFullYear();
+  renderProducts();
+  createPetals();
+}
