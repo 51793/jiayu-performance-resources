@@ -310,7 +310,7 @@ function createPetals() {
   for (let index = 0; index < petalCount; index += 1) {
     const petal = document.createElement("span");
     petal.className = "petal";
-    petal.style.setProperty("--left", `${Math.random() * 100}%`);
+    petal.style.setProperty("--left", `${Math.random() * 93}%`);
     petal.style.setProperty("--size", `${7 + Math.random() * 8}px`);
     petal.style.setProperty("--duration", `${10 + Math.random() * 11}s`);
     petal.style.setProperty("--delay", `${Math.random() * -20}s`);
