@@ -2,13 +2,21 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
     <meta
       name="description"
       content="伽鱼免 Root 安卓性能资源站，提供性能模块、免 Root 工具箱与配套教学，支持卡网商品直达。"
     />
     <meta name="color-scheme" content="dark" />
     <meta name="theme-color" content="#201824" />
+    <meta name="referrer" content="no-referrer" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; form-action 'none'; upgrade-insecure-requests"
+    />
     <title>伽鱼 · 免 Root 性能资源站</title>
     <link rel="icon" href="assets/logo.jpg" type="image/jpeg" />
     <link rel="preload" href="assets/logo.jpg" as="image" />
@@ -46,16 +54,26 @@
         <div class="hero-copy">
           <p class="eyebrow"><span></span> JIAYU PERFORMANCE LAB</p>
           <h1>
-            不靠 Root，<br />
-            也能把<span class="highlight">性能调度</span>做得更深。
+            伽鱼性能<br />
+            <span class="highlight">免Root调度</span>，<br />
+            深耕安卓底层性能，<br />
+            开创不一样的数码世界！
           </h1>
           <p class="hero-description">
             面向安卓游戏与高负载使用场景，重新设计免 Root 调度链路。
             从负载识别、任务分发到温控策略，针对不同芯片架构做精细化适配。
           </p>
+          <blockquote class="galileo-quote">
+            <span class="quote-sigil" aria-hidden="true">✧</span>
+            <div>
+              <p class="quote-latin">Eppur si muove.</p>
+              <p class="quote-cn">“但它仍在转动。”</p>
+              <cite><span aria-hidden="true">✦</span> 伽利略 · 据传于宗教审判之后</cite>
+            </div>
+          </blockquote>
           <div class="hero-actions">
             <a class="button button-primary" href="#products">
-              浏览全部商品
+              免root模块资源获取
               <span class="button-arrow" aria-hidden="true">→</span>
             </a>
             <a class="text-link" href="#solution">先了解方案 <span>↓</span></a>
@@ -213,7 +231,7 @@
             <b>商品价格与库存以卡网页面为准</b>
             <p>商品名称、价格与说明读取自 2026 年 11 月 10 日的卡网页面。若页面后续调整，请以实际下单页为准。</p>
           </div>
-          <a href="https://gtq.oopb.cn/shop/KWTIS61C" target="_blank" rel="noopener noreferrer">
+          <a href="https://gtq.oopb.cn/shop/KWTIS61C" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">
             进入店铺主页 <span aria-hidden="true">↗</span>
           </a>
         </div>
@@ -313,7 +331,7 @@
           </div>
         </div>
         <div class="footer-meta">
-          <a href="https://gtq.oopb.cn/shop/KWTIS61C" target="_blank" rel="noopener noreferrer">伽鱼数码资源售卖平台 ↗</a>
+          <a href="https://gtq.oopb.cn/shop/KWTIS61C" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">伽鱼数码资源售卖平台 ↗</a>
           <span>© <span id="year"></span> JIAYU STUDIO</span>
         </div>
       </div>
@@ -350,7 +368,7 @@
           </svg>
           <span>复制链接</span>
         </button>
-        <a class="button button-primary" id="openProductLink" href="#" target="_blank" rel="noopener noreferrer">
+        <a class="button button-primary" id="openProductLink" href="#" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">
           直接打开卡网商品页
           <span class="button-arrow" aria-hidden="true">↗</span>
         </a>
