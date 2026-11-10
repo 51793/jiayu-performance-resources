@@ -34,12 +34,18 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 92px;
+  overscroll-behavior-x: none;
+  touch-action: pan-y;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
   min-height: 100vh;
   margin: 0;
   overflow-x: hidden;
+  overscroll-behavior-x: none;
+  touch-action: pan-y;
   color: var(--text);
   background:
     radial-gradient(circle at 9% 7%, rgba(255, 160, 184, 0.34), transparent 28%),
@@ -265,8 +271,21 @@ summary:focus-visible {
   grid-template-columns: minmax(0, 1.04fr) minmax(390px, 0.96fr);
   align-items: center;
   gap: 72px;
-  min-height: 740px;
+  min-height: 800px;
   padding-block: 72px 94px;
+}
+
+.hero-copy {
+  min-width: 0;
+}
+
+.hero-copy h1 {
+  overflow-wrap: break-word;
+}
+
+.hero-copy p,
+.hero-copy blockquote {
+  overflow-wrap: anywhere;
 }
 
 .hero::before {
@@ -308,10 +327,10 @@ summary:focus-visible {
   max-width: 680px;
   margin: 0;
   color: #fff0f4;
-  font-size: clamp(42px, 4.7vw, 68px);
+  font-size: clamp(38px, 3.6vw, 52px);
   font-weight: 900;
-  line-height: 1.17;
-  letter-spacing: -0.055em;
+  line-height: 1.2;
+  letter-spacing: -0.045em;
   text-wrap: balance;
 }
 
@@ -342,11 +361,87 @@ summary:focus-visible {
   line-height: 1.9;
 }
 
+.galileo-quote {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  max-width: 570px;
+  margin: 24px 0 0;
+  padding: 14px 18px 14px 15px;
+  border: 1px solid rgba(255, 184, 199, 0.16);
+  border-radius: 15px;
+  background:
+    linear-gradient(100deg, rgba(255, 157, 176, 0.085), rgba(185, 164, 255, 0.045)),
+    rgba(21, 16, 28, 0.27);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.galileo-quote::after {
+  position: absolute;
+  top: 9px;
+  right: 14px;
+  color: rgba(255, 193, 204, 0.22);
+  content: "“";
+  font-family: Georgia, serif;
+  font-size: 46px;
+  line-height: 1;
+}
+
+.quote-sigil {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  border: 1px solid rgba(255, 172, 190, 0.24);
+  border-radius: 50%;
+  color: var(--rose-soft);
+  background: rgba(255, 157, 176, 0.075);
+  font-size: 15px;
+  box-shadow: 0 0 18px rgba(255, 120, 150, 0.1);
+  place-items: center;
+}
+
+.galileo-quote div {
+  min-width: 0;
+}
+
+.quote-latin {
+  margin: 0;
+  color: var(--gold-bright);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  font-style: italic;
+  letter-spacing: 0.025em;
+}
+
+.quote-cn {
+  margin: 2px 0 4px;
+  color: #fff0f4;
+  font-family: "Songti SC", "STSong", serif;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.galileo-quote cite {
+  display: block;
+  color: var(--muted-deep);
+  font-size: 8px;
+  font-style: normal;
+  letter-spacing: 0.05em;
+}
+
+.galileo-quote cite span {
+  margin-right: 4px;
+  color: var(--rose);
+}
+
 .hero-actions {
   display: flex;
   align-items: center;
   gap: 26px;
-  margin-top: 35px;
+  margin-top: 25px;
 }
 
 .button {
@@ -445,7 +540,7 @@ summary:focus-visible {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 34px;
+  margin-top: 24px;
 }
 
 .trust-row span {
@@ -1722,13 +1817,32 @@ summary:focus-visible {
   }
 
   .hero h1 {
-    font-size: clamp(35px, 9.6vw, 56px);
-    letter-spacing: -0.06em;
+    font-size: clamp(30px, 8.3vw, 46px);
+    letter-spacing: -0.045em;
   }
 
   .hero-description {
     margin-top: 22px;
     font-size: 12px;
+  }
+
+  .galileo-quote {
+    margin-top: 20px;
+    padding: 12px 14px;
+  }
+
+  .quote-sigil {
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+  }
+
+  .quote-latin {
+    font-size: 13px;
+  }
+
+  .quote-cn {
+    font-size: 15px;
   }
 
   .hero-actions {
