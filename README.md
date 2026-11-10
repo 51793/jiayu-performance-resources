@@ -2,6 +2,11 @@
 
 无依赖的静态商品展示页，包含免 Root 性能方案介绍、8 个卡网商品、分类筛选、商品详情弹窗、复制链接、直接跳转和樱花飘落效果。
 
+## 在线访问
+
+- 固定网址：https://51793.github.io/jiayu-performance-resources/
+- GitHub 仓库：https://github.com/51793/jiayu-performance-resources
+
 ## 使用方式
 
 直接双击 `index.html` 即可预览，也可以将本项目部署到任意静态托管平台。
