@@ -578,6 +578,7 @@ summary:focus-visible {
   position: relative;
   display: grid;
   min-height: 560px;
+  overflow: clip;
   place-items: center;
 }
 
