@@ -310,11 +310,11 @@ function createPetals() {
   for (let index = 0; index < petalCount; index += 1) {
     const petal = document.createElement("span");
     petal.className = "petal";
-    petal.style.setProperty("--left", `${Math.random() * 93}%`);
+    petal.style.setProperty("--left", `${20 + Math.random() * 60}%`);
     petal.style.setProperty("--size", `${7 + Math.random() * 8}px`);
     petal.style.setProperty("--duration", `${10 + Math.random() * 11}s`);
     petal.style.setProperty("--delay", `${Math.random() * -20}s`);
-    petal.style.setProperty("--drift", `${-80 + Math.random() * 160}px`);
+    petal.style.setProperty("--drift", `${-40 + Math.random() * 80}px`);
     petal.style.setProperty("--spin", `${180 + Math.random() * 480}deg`);
     petal.style.setProperty("--opacity", `${0.2 + Math.random() * 0.38}`);
     fragment.appendChild(petal);
